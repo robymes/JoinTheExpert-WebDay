@@ -17,6 +17,11 @@
             "taskName": "aspnet:build",
             "isBuildCommand": false,
             "showOutput": "always"
+        },
+        {
+            "taskName": "default",
+            "isBuildCommand": true,
+            "showOutput": "always"
         }
     ]
 }
