@@ -1,0 +1,22 @@
+{
+    "version": "0.1.0",
+    "command": "gulp",
+    "isShellCommand": true,
+    "tasks": [
+        {
+            "taskName": "lib:build",
+            "isBuildCommand": false,
+            "showOutput": "always"
+        },
+        {
+            "taskName": "src:build",
+            "isBuildCommand": false,
+            "showOutput": "always"
+        },
+        {
+            "taskName": "aspnet:build",
+            "isBuildCommand": false,
+            "showOutput": "always"
+        }
+    ]
+}

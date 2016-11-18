@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row show">
+    <div class="col-md-8" data-bind="with: toDoList">
+        <div class="alert alert-danger" role="alert" data-bind="css: { hidden: errorMessage() === ''}">
+            <strong>ATTENZIONE: </strong><span data-bind="text: errorMessage"></span>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">ToDo Items</div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Due Date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: items">
+                    <tr>
+                        <td data-bind="text: $index"></td>
+                        <td data-bind="text: title"></td>
+                        <td data-bind="text: description"></td>
+                        <td data-bind="text: moment(dueDate).format('DD/MM/YYYY')"></td>
+                        <td></td>                                                                                                
+                    </tr>                            
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-4" id="newTodoItemView">
+        Lorem Ipsum...                
+    </div>
+</div> 
