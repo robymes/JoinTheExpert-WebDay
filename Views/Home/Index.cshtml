@@ -31,7 +31,32 @@
             </table>
         </div>
     </div>
-    <div class="col-md-4" id="newTodoItemView">
-        Lorem Ipsum...                
+    <div class="col-md-4" data-bind="with: newToDoItem">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">New ToDo Item</h3>
+            </div>
+            <div class="panel-body">
+                <div role="form">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" class="form-control" placeholder="Enter ToDo title" data-bind="textInput: title">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" placeholder="Enter ToDo description" data-bind="textInput: description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Due Date</label>
+                        <div class="input-group date">
+                            <input type="text" class="form-control" placeholder="Enter Due Date" data-bind="datepicker: dueDate">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                        </div>
+                        <div class="alert alert-danger hidden" role="alert" style="margin-top: 5px;"><small><strong>Invalid Date!</strong></small></div>
+                    </div>
+                    <button type="submit" class="btn btn-default" data-bind="enable: canInsertNewItem, click: insertNewItem">Add ToDo Item</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div> 

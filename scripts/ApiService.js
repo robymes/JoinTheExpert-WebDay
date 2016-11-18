@@ -1,8 +1,7 @@
 this.webapp = (function (webapp) {
     var ctor = function () {
-        var self = this;
-        self.loadTodoItems = function () {
-            var items =
+        var self = this,
+            fakeItems =
                 Enumerable.cycle({
                     title: "Star Wars Rogue One",
                     description: "Hype!",
@@ -26,7 +25,19 @@ this.webapp = (function (webapp) {
                     })
                 )
                 .toArray();
-            return jQuery.ajax(items);
+
+        self.loadTodoItems = function () {
+            var result = [];
+            Enumerable.from(fakeItems)
+                .forEach(function (item) {
+                    result.push(item);
+                });
+            return jQuery.ajax(result);
+        };
+
+        self.insertNewToDoItem = function (newToDoItem) {
+            fakeItems.push(newToDoItem);
+            return jQuery.ajax(true);
         };
     };
     webapp.ApiService = function () {

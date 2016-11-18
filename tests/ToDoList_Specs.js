@@ -1,10 +1,12 @@
 describe("Dato il viewmodel della lista di item", function () {
     var apiService,
+        applicationBus,
         toDoListViewModel;
 
     beforeEach(function () {
-        apiService = new webapp.ApiService();
-        toDoListViewModel = new webapp.ToDoListViewModel(apiService);
+        apiService = webapp.ApiService();
+        applicationBus = webapp.ApplicationBus();
+        toDoListViewModel = webapp.ToDoListViewModel(apiService, applicationBus);
     });
 
     it("quando creato, non contiene elementi", function () {

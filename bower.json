@@ -21,7 +21,8 @@
     "knockout": "v3.4.1",
     "moment": "2.15.2",
     "linqjs": "3.0.5",
-    "json2": ""
+    "json2": "",
+    "bacon": "0.7.89"
   },
   "devDependencies": {},
     "resolutions": {

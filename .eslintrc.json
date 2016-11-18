@@ -68,6 +68,7 @@
         "webapp": true,
         "module": true,
         "__dirname": true,
-        "dojo": true
+        "dojo": true,
+        "Bacon": true
     }
 }

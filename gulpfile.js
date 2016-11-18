@@ -19,17 +19,22 @@ var gulp = require("gulp"),
             "wwwroot/scripts/linq.min.js",
             "wwwroot/scripts/bootstrap.min.js",
             "wwwroot/scripts/knockout.js",
-            "wwwroot/scripts/moment-with-locales.min.js"
+            "wwwroot/scripts/moment-with-locales.min.js",
+            "wwwroot/scripts/Bacon.min.js"
         ],
         src: [
             "scripts/Utils.js",
+            "scripts/ApplicationBus.js",
             "scripts/ApiService.js",
+            "scripts/NewToDoItemViewModel.js",
             "scripts/ToDoListViewModel.js",
             "scripts/App.js"
         ],
         testSrc: [
             "scripts/Utils.js",
+            "scripts/ApplicationBus.js",
             "scripts/ApiService.js",
+            "scripts/NewToDoItemViewModel.js",
             "scripts/ToDoListViewModel.js"
         ]
     };
