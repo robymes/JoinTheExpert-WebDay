@@ -20,9 +20,6 @@ bld/
 tests/[Dd]ebug/
 tests/[Rr]elease/
 
-# wwwroot
-wwwroot/
-
 # dependencies
 bower_components/
 node_modules/
