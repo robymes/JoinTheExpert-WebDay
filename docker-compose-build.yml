@@ -1,0 +1,8 @@
+version: '2'
+services:
+  webapp-build:
+    image: microsoft/aspnetcore-build:1.1.0-projectjson
+    volumes:
+      - .:/webapp
+    working_dir: /webapp
+    entrypoint: ["sh", "./build.sh"]
